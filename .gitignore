@@ -1,0 +1,148 @@
+# ---------------------------------------------------------------------------
+# .gitignore — SEZ + GIS Indonesia
+#
+# Anything matching a pattern here is invisible to git: it won't be committed
+# and won't show up in `git status`. The goal is to track code and small text
+# files, and keep large binaries (especially geodata) out of the repo history.
+#
+# To commit a single ignored file anyway, force it:  git add -f path/to/file
+# ---------------------------------------------------------------------------
+
+
+# --- Python ----------------------------------------------------------------
+# Bytecode caches — regenerated automatically, never worth committing.
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments. UV creates .venv/ by default. The environment is
+# reproducible from pyproject.toml + uv.lock, so the folder itself is disposable.
+.venv/
+venv/
+env/
+
+# Build/packaging output.
+build/
+dist/
+*.egg-info/
+
+# NOTE: uv.lock is deliberately NOT ignored. Commit it — it pins exact package
+# versions so the project installs identically on another machine.
+
+
+# --- Notebooks -------------------------------------------------------------
+# Marimo notebooks are plain .py files, so they ARE tracked (that's the point).
+# Only its scratch/cache dirs are ignored:
+__marimo__/
+.marimo.toml
+
+# Jupyter, if you ever use it here.
+.ipynb_checkpoints/
+
+
+# --- Geospatial data -------------------------------------------------------
+# The big one. GIS files are binaries that are often tens or hundreds of MB.
+# GitHub warns above 50 MB and hard-rejects anything over 100 MB, and once a
+# large file is committed it stays in the history even after you delete it.
+# Keep raw data local; keep the SCRIPT that downloads or builds it in the repo.
+
+# Shapefiles — note this is a set of sibling files, not one file.
+*.shp
+*.shx
+*.dbf
+*.prj
+*.cpg
+*.sbn
+*.sbx
+*.qix
+
+# Other vector containers.
+*.gpkg
+*.gpkg-shm
+*.gpkg-wal
+*.geojson
+*.gdb/
+*.kml
+*.kmz
+
+# Rasters.
+*.tif
+*.tiff
+*.img
+*.jp2
+*.asc
+*.nc
+*.hdf
+*.hdf5
+
+# Local spatial databases.
+*.sqlite
+*.db
+*.mbtiles
+
+
+# --- Tabular data ----------------------------------------------------------
+# Ignore data folders wholesale rather than by extension, so a stray .csv in
+# your source tree still gets tracked while bulk downloads don't.
+# Note the trailing /* rather than a bare /. Git never descends into an
+# ignored DIRECTORY, so writing `data/raw/` would make the .gitkeep exception
+# below unreachable. Ignoring the CONTENTS keeps the exception working.
+data/raw/*
+data/interim/*
+data/processed/*
+data/external/*
+
+# Keep the empty folder structure in the repo, so a fresh clone has somewhere
+# to put data. Create the markers with:  touch data/raw/.gitkeep
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+!data/external/.gitkeep
+
+# Large tabular formats anywhere in the tree.
+*.parquet
+*.feather
+*.xlsx
+*.xls
+
+
+# --- Secrets ---------------------------------------------------------------
+# API keys, tokens, database passwords. Never commit these — a pushed secret
+# must be treated as compromised even if you delete it in the next commit.
+.env
+.env.*
+*.pem
+*.key
+secrets.toml
+credentials.json
+
+
+# --- Editor & OS -----------------------------------------------------------
+# VS Code: ignore personal settings, but allow shared project config if you
+# ever add it (extensions.json is useful to share with collaborators).
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+.idea/
+*.swp
+
+# Pop!_OS / Linux
+.directory
+.Trash-*
+
+# macOS / Windows — collaborators may be on either.
+.DS_Store
+Thumbs.db
+desktop.ini
+
+
+# --- Output ----------------------------------------------------------------
+# Generated figures and exports. Ignored by default because they're rebuilt
+# from code. If a final map belongs in the repo, force-add it:
+#   git add -f figures/final_map.png
+figures/
+outputs/
+*.log
+
+Industrial_Cluster_Location_Proposal.docx
