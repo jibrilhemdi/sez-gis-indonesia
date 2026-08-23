@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Environment variables / secrets
+.env
+*.env
+
+# Geospatial software artifacts
+*.qgs~
+*.qgz~
+*.aux.xml
+*.ovr
+*.gpkg-wal
+*.gpkg-shm
+*.gdb/
+
+# Large datasets (keep raw data out of version control)
+data/raw/
+data/interim/
+*.nc
+
+# OS / editor noise
+Thumbs.db
+desktop.ini
+.DS_Store
+.idea/
+.vscode/
+
+# OneDrive sync conflicts
+*-conflict*
