@@ -1,0 +1,181 @@
+# Official designation text transcribed 2026-09-25; annex boundary maps unavailable.
+kapet_zones:
+- zone_id: kapet_biak
+  name_original: KAPET Biak
+  designation_instrument: Keputusan Presiden Nomor 90 Tahun 1996
+  designation_date_text: '1996'
+  date_precision: year
+  territory_original: Selected areas of Biak Numfor, Manokwari, Yapen Waropen, Paniai and Mimika
+  source_url: https://www.peraturan.go.id/files/kp90-1996.pdf
+  evidence_locator: Pasal 1(2)
+  supporting_excerpt: Selected areas of Biak Numfor, Manokwari, Yapen Waropen, Paniai and Mimika
+  review_status: article_text_verified; annex_unavailable; historical_boundaries_unverified
+- zone_id: kapet_pare_pare
+  name_original: KAPET Pare-Pare
+  designation_instrument: Keputusan Presiden Nomor 164 Tahun 1998
+  designation_date_text: '1998'
+  date_precision: year
+  territory_original: Entire Pare-Pare, Barru, Pinrang, Sidenreng Rappang and Enrekang
+  source_url: https://peraturan.bpk.go.id/Download/48966/Keputusan_Presiden_no_164%20TH%201998.pdf
+  evidence_locator: Pasal 1(2)
+  supporting_excerpt: Entire Pare-Pare, Barru, Pinrang, Sidenreng Rappang and Enrekang
+  review_status: article_text_verified; annex_unavailable; historical_boundaries_unverified
+- zone_id: kapet_bukari
+  name_original: KAPET Bukari (Buton, Kolaka dan Kendari)
+  designation_instrument: Keputusan Presiden Nomor 168 Tahun 1998
+  designation_date_text: '1998'
+  date_precision: year
+  territory_original: Selected areas of Buton, Kolaka and Kendari; centre Poleang Timur
+  source_url: https://www.peraturan.go.id/files/kp168-1998.pdf
+  evidence_locator: Pasal 1(1)-(2)
+  supporting_excerpt: Selected areas of Buton, Kolaka and Kendari; centre Poleang Timur
+  review_status: article_text_verified; annex_unavailable; historical_boundaries_unverified
+- zone_id: kapet_das_kakab
+  name_original: KAPET DAS Kakab
+  designation_instrument: Keputusan Presiden Nomor 170 Tahun 1998
+  designation_date_text: '1998-09-22'
+  date_precision: day
+  territory_original: Ambiguous entire/partial Kapuas; part Barito Selatan; entire Palangkaraya
+  territory_review_note: The words "seluruh sebagian" require verification against a legible official copy; the
+    annex is unavailable here. Do not assign the whole Kapuas district.
+  source_url: https://www.peraturan.go.id/files/kp170-1998.pdf
+  evidence_locator: Pasal 1(2)
+  supporting_excerpt: Ambiguous entire/partial Kapuas; part Barito Selatan; entire Palangkaraya
+  review_status: article_text_verified; annex_unavailable; historical_boundaries_unverified
+- zone_id: kapet_sabang
+  name_original: KAPET Sabang
+  designation_instrument: Keputusan Presiden Nomor 171 Tahun 1998
+  designation_date_text: '1998'
+  date_precision: year
+  territory_original: Entire Sabang municipality; Weh, Nasi, Breuh, Teunon and nearby small islands
+  source_url: https://www.peraturan.go.id/files/kp171-1998.pdf
+  evidence_locator: Pasal 1(2)
+  supporting_excerpt: Entire Sabang municipality; Weh, Nasi, Breuh, Teunon and nearby small islands
+  review_status: article_text_verified; annex_unavailable; historical_boundaries_unverified
+- zone_id: kapet_batulicin
+  name_original: KAPET Batulicin
+  designation_instrument: Keputusan Presiden Nomor 11 Tahun 1998
+  designation_date_text: '1998'
+  date_precision: year
+  territory_original: Kotabaru, entire historical regency
+  source_url: https://peraturan.go.id/files/kp11-1998.pdf
+  evidence_locator: Pasal 1(2)
+  supporting_excerpt: Kotabaru, entire historical regency
+  review_status: article_text_verified; annex_unavailable; historical_boundaries_unverified
+- zone_id: kapet_sasamba
+  name_original: KAPET Sasamba
+  designation_instrument: Keputusan Presiden Nomor 12 Tahun 1998
+  designation_date_text: '1998'
+  date_precision: year
+  territory_original: Samarinda and Balikpapan, entire historical municipalities; named districts of historic Kutai
+  source_url: https://peraturan.go.id/files/kp12-1998.pdf
+  evidence_locator: Pasal 1(2)
+  supporting_excerpt: Samarinda and Balikpapan, entire historical municipalities; named districts of historic Kutai
+  review_status: article_text_verified; annex_unavailable; historical_boundaries_unverified
+- zone_id: kapet_sanggau
+  name_original: KAPET Sanggau
+  designation_instrument: Keputusan Presiden Nomor 13 Tahun 1998
+  designation_date_text: '1998'
+  date_precision: year
+  territory_original: Sanggau and Sambas, entire historical regencies; Air Besar within part of historic Pontianak
+  source_url: https://peraturan.go.id/files/kp13-1998.pdf
+  evidence_locator: Pasal 1(2)
+  supporting_excerpt: Sanggau and Sambas, entire historical regencies; Air Besar within part of historic Pontianak
+  review_status: article_text_verified; annex_unavailable; historical_boundaries_unverified
+- zone_id: kapet_manado_bitung
+  name_original: KAPET Manado-Bitung
+  designation_instrument: Keputusan Presiden Nomor 14 Tahun 1998
+  designation_date_text: '1998'
+  date_precision: year
+  territory_original: Bitung and Manado entire municipalities; named districts of historic Minahasa
+  source_url: https://peraturan.go.id/files/kp14-1998.pdf
+  evidence_locator: Pasal 1(2)
+  supporting_excerpt: Bitung and Manado entire municipalities; named districts of historic Minahasa
+  review_status: article_text_verified; annex_unavailable; historical_boundaries_unverified
+- zone_id: kapet_mbay
+  name_original: KAPET Mbay
+  designation_instrument: Keputusan Presiden Nomor 15 Tahun 1998
+  designation_date_text: '1998'
+  date_precision: year
+  territory_original: Ngada entire historical regency
+  source_url: https://peraturan.go.id/files/kp15-1998.pdf
+  evidence_locator: Pasal 1(2)
+  supporting_excerpt: Ngada entire historical regency
+  review_status: article_text_verified; annex_unavailable; historical_boundaries_unverified
+- zone_id: kapet_seram
+  name_original: KAPET Seram
+  designation_instrument: Keputusan Presiden Nomor 165 Tahun 1998
+  designation_date_text: '1998'
+  date_precision: year
+  territory_original: Seram, Boano, Manipa and Kelang islands
+  source_url: https://peraturan.go.id/files/kp165-1998.pdf
+  evidence_locator: Pasal 1(2)
+  supporting_excerpt: Seram, Boano, Manipa and Kelang islands
+  review_status: article_text_verified; annex_unavailable; historical_boundaries_unverified
+- zone_id: kapet_bima
+  name_original: KAPET Bima
+  designation_instrument: Keputusan Presiden Nomor 166 Tahun 1998
+  designation_date_text: '1998'
+  date_precision: year
+  territory_original: Bima and Dompu entire historical regencies
+  source_url: https://peraturan.go.id/files/kp166-1998.pdf
+  evidence_locator: Pasal 1(2)
+  supporting_excerpt: Bima and Dompu entire historical regencies
+  review_status: article_text_verified; annex_unavailable; historical_boundaries_unverified
+- zone_id: kapet_batui
+  name_original: KAPET Batui
+  designation_instrument: Keputusan Presiden Nomor 167 Tahun 1998
+  designation_date_text: '1998'
+  date_precision: year
+  territory_original: 'Selected part of Banggai: Luwuk, Kintom, Batui, Toili'
+  source_url: https://peraturan.go.id/files/kp167-1998.pdf
+  evidence_locator: Pasal 1(1)-(2)
+  supporting_excerpt: 'Selected part of Banggai: Luwuk, Kintom, Batui, Toili'
+  review_status: article_text_verified; annex_unavailable; historical_boundaries_unverified
+- zone_id: kapet_benaviq
+  name_original: KAPET Benaviq
+  designation_instrument: Keputusan Presiden Nomor 169 Tahun 1998
+  designation_date_text: '1998'
+  date_precision: year
+  territory_original: Part of Viqueque, Manatuto and Manufahi in historical Timor Timur, now outside Indonesia
+  source_url: https://peraturan.go.id/files/kp169-1998.pdf
+  evidence_locator: Pasal 1(1)-(2)
+  supporting_excerpt: Part of Viqueque, Manatuto and Manufahi in historical Timor Timur, now outside Indonesia
+  review_status: article_text_verified; annex_unavailable; historical_boundaries_unverified
+kapet_programme_events:
+- event_id: kapet_programme_creation
+  instrument: Keputusan Presiden Nomor 89 Tahun 1996
+  event_type: programme_creation
+  event_date_text: '1996-12-03'
+  date_precision: day
+  source_url: https://peraturan.bpk.go.id/Details/60051/keppres-no-89-tahun-1996
+  evidence_locator: BPK regulation metadata, Tanggal Penetapan/Tanggal Berlaku
+  supporting_excerpt: Tanggal Berlaku 03 Desember 1996
+  review_status: metadata_verified; PDF_article_review_pending
+- event_id: kapet_programme_amendment
+  instrument: Keputusan Presiden Nomor 9 Tahun 1998
+  event_type: programme_amendment
+  event_date_text: '1998'
+  date_precision: year
+  source_url: https://peraturan.go.id/files/kp9-1998.pdf
+  evidence_locator: PDF title page
+  supporting_excerpt: PERUBAHAN ATAS KEPUTUSAN PRESIDEN NOMOR 89 TAHUN 1996
+  review_status: date_and_articles_need_pdf_review
+- event_id: kapet_programme_replacement
+  instrument: Keputusan Presiden Nomor 150 Tahun 2000
+  event_type: programme_replacement
+  event_date_text: '2000'
+  date_precision: year
+  source_url: https://peraturan.go.id/files/kp150-2000.pdf
+  evidence_locator: Pasal 10(1), indexed official PDF text
+  supporting_excerpt: dinyatakan tidak berlaku lagi
+  review_status: effective_date_and_effect_on_zone_decrees_need_review
+- event_id: kapet_biak_amendment_1998
+  instrument: Keputusan Presiden Nomor 10 Tahun 1998
+  event_type: zone_amendment
+  event_date_text: '1998'
+  date_precision: year
+  source_url: https://peraturan.go.id/files/kp10-1998.pdf
+  evidence_locator: Title and amendment articles
+  supporting_excerpt: Perubahan atas Keputusan Presiden Nomor 90 Tahun 1996
+  review_status: amendment_identified; legal_effect_review_pending

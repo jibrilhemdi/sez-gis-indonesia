@@ -1,0 +1,15 @@
+source_id,intended_use,classification,publication_date,observation_date,geometry_vintage,event_date,reason
+geoboundaries_idn_adm0,national_selection,static_proxy_requires_assumption,,2017,2017,,ADM0 represented year from source API; not a 1992 administrative map or coastline
+imf_portwatch_daily,contemporary_port_activity,contemporary_only,,2019-01-01/2026-09-18,,,Actual extracted daily range; cannot enter early predictor period
+imf_portwatch_ports,current_port_reference,contemporary_only,,2019-2025,current_unverified,,Publisher point metadata describes AIS estimates over 2019-2025; current positions are not historical geometry
+big_kemenhub_ports,current_port_inventory,contemporary_only,,current_service,current_unverified,,Year fields need review before historical inference
+iaph_ports_harbors_1996_06,historical_port_presence,historical_supported,1996-06,1991/1995,unknown,,Seven named ports have positive table entries for 1992 and 1995; no historic coordinates or 2000 support
+big_peta_lahan_gambut,peat_soil_supplement,static_proxy_requires_assumption,,current_map,unknown,,Only partial Kalimantan public polygons; not a 1992 national peat map or non-peat mask
+osmdata_coastlines,coastal_geography,static_proxy_requires_assumption,2026-09-25,current_snapshot,current_snapshot,,Reclamation and mapping change possible
+cifor_global_wetlands_v3,peat_constraint,unresolved,,unknown,unknown,,Modelled map not yet acquired; no 1992 validity established
+gebco_2026,bathymetry_candidate,static_proxy_requires_assumption,2026,heterogeneous_surveys,2026,,Native 2026 elevation and TID acquired; current grid includes measured and predicted depths and may reflect dredging
+jdih_bpk_keppres_89_1996,kapet_treatment,unresolved,,unknown,unknown,1996/2000,Decree evidence and territory reconstruction incomplete
+official_kapet_decrees,kapet_treatment,unresolved,,indexed_official_articles,unknown,1996/2000,Fourteen designation instruments and four programme/amendment events; annex boundaries and complete treatment dates unresolved
+geofabrik_osm_policy,modern_policy_location,contemporary_only,2026-09-25,2026-09-24,2026-09-24,,Six dated OSM extracts yield modern location proxies only; no historical treatment or non-treatment assignment
+rothenberg_wang_chari_2025,policy_reference,unresolved,2025,not_applicable,not_applicable,,Published article states data available on request; no replication geometry acquired
+kek_official_registry,contemporary_kek,contemporary_only,,2026-09-25,current,unknown,Two current official detail pages acquired; incomplete registry and no verified legal dates or polygons

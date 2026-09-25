@@ -1,0 +1,118 @@
+boundary:
+  id: geoboundaries_idn_adm0
+  title: Indonesia ADM0 gbOpen
+  publisher: geoBoundaries
+  landing_url: https://www.geoboundaries.org/api.html
+  metadata_url: https://www.geoboundaries.org/api/current/gbOpen/IDN/ADM0/
+port_activity:
+  id: imf_portwatch_daily
+  title: Daily_Ports_Data
+  publisher: IMF PortWatch
+  landing_url: https://portwatch.imf.org/pages/data-and-methodology
+  layer_url: https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Ports_Data/FeatureServer/0
+port_points:
+  id: imf_portwatch_ports
+  title: PortWatch ports database
+  publisher: IMF PortWatch
+  landing_url: https://portwatch.imf.org/datasets/acc668d199d1472abaaf2467133d4ca4_0/about
+  layer_url: https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/PortWatch_ports_database/FeatureServer/0
+big_ports:
+  id: big_kemenhub_ports
+  title: Peta Sebaran Pelabuhan Umum and Peta Sebaran Terminal Khusus
+  publisher: BIG / Kemenhub
+  landing_url: https://kspservices.big.go.id/satupeta/rest/services/PUBLIK/SARANA_PRASARANA/MapServer
+  layer_url: https://kspservices.big.go.id/satupeta/rest/services/PUBLIK/SARANA_PRASARANA/MapServer
+  layer_ids: [1, 3]
+historical_port_evidence:
+  id: iaph_ports_harbors_1996_06
+  title: Ports and Harbors, June 1996, Indonesian port container traffic table
+  publisher: International Association of Ports and Harbors
+  landing_url: https://www.iaphworldports.org/n-iaph/wp-content/uploads/ph/1996-5.pdf
+  download_url: https://www.iaphworldports.org/n-iaph/wp-content/uploads/ph/1996-5.pdf
+coast:
+  id: osmdata_coastlines
+  title: Processed OpenStreetMap coastlines
+  publisher: OpenStreetMap Data / OSM contributors
+  landing_url: https://osmdata.openstreetmap.de/data/coastlines.html
+  download_url: https://osmdata.openstreetmap.de/download/coastlines-split-4326.zip
+peatland:
+  id: cifor_global_wetlands_v3
+  title: Global Wetlands V3 peat extent
+  publisher: CIFOR / SWAMP
+  landing_url: https://www2.cifor.org/global-wetlands/
+  download_page: https://data.cifor.org/
+government_peat:
+  id: big_peta_lahan_gambut
+  title: Peta Lahan Gambut (partial public service)
+  publisher: BIG / Kementerian Pertanian
+  landing_url: https://kspservices.big.go.id/satupeta/rest/services/PUBLIK/SUMBER_DAYA_ALAM_DAN_LINGKUNGAN/MapServer/6
+  layer_url: https://kspservices.big.go.id/satupeta/rest/services/PUBLIK/SUMBER_DAYA_ALAM_DAN_LINGKUNGAN/MapServer/6
+gebco:
+  id: gebco_2026
+  title: GEBCO_2026 Grid and TID
+  publisher: GEBCO Compilation Group
+  landing_url: https://www.gebco.net/data-products/gridded-bathymetry-data
+  download_page: https://download.gebco.net/downloads
+  elevation_opendap_url: https://dap.ceda.ac.uk/thredds/dodsC/bodc/gebco/global/gebco_2026/ice_surface_elevation/netcdf/GEBCO_2026.nc
+  tid_opendap_url: https://dap.ceda.ac.uk/thredds/dodsC/bodc/gebco/global/gebco_2026/type_identifier_grid/netcdf/gebco_2026_tid.nc
+kapet_law:
+  id: jdih_bpk_keppres_89_1996
+  title: Keputusan Presiden Nomor 89 Tahun 1996
+  publisher: JDIH BPK
+  landing_url: https://peraturan.bpk.go.id/Details/60051/keppres-no-89-tahun-1996
+  official_alternative: https://peraturan.go.id/files/kp89-1996.pdf
+  verified_documents:
+    - {id: kp89-1996, url: 'https://peraturan.go.id/files/kp89-1996.pdf', role: programme_creation}
+    - {id: kp90-1996, url: 'https://www.peraturan.go.id/files/kp90-1996.pdf', role: biak_designation}
+    - {id: kp9-1998, url: 'https://peraturan.go.id/files/kp9-1998.pdf', role: programme_amendment}
+    - {id: kp10-1998, url: 'https://peraturan.go.id/files/kp10-1998.pdf', role: biak_amendment}
+    - {id: kp11-1998, url: 'https://peraturan.go.id/files/kp11-1998.pdf', role: batulicin_designation}
+    - {id: kp12-1998, url: 'https://peraturan.go.id/files/kp12-1998.pdf', role: sasamba_designation}
+    - {id: kp13-1998, url: 'https://peraturan.go.id/files/kp13-1998.pdf', role: sanggau_designation}
+    - {id: kp14-1998, url: 'https://peraturan.go.id/files/kp14-1998.pdf', role: manado_bitung_designation}
+    - {id: kp15-1998, url: 'https://peraturan.go.id/files/kp15-1998.pdf', role: mbay_designation}
+    - {id: kp164-1998, url: 'https://www.peraturan.go.id/files/kp164-1998.pdf', role: parepare_designation}
+    - {id: kp165-1998, url: 'https://peraturan.go.id/files/kp165-1998.pdf', role: seram_designation}
+    - {id: kp166-1998, url: 'https://peraturan.go.id/files/kp166-1998.pdf', role: bima_designation}
+    - {id: kp167-1998, url: 'https://peraturan.go.id/files/kp167-1998.pdf', role: batui_designation}
+    - {id: kp168-1998, url: 'https://www.peraturan.go.id/files/kp168-1998.pdf', role: buton_kolaka_kendari_designation}
+    - {id: kp169-1998, url: 'https://peraturan.go.id/files/kp169-1998.pdf', role: benaviq_designation}
+    - {id: kp170-1998, url: 'https://www.peraturan.go.id/files/kp170-1998.pdf', role: kahayan_kapuas_barito_designation}
+    - {id: kp171-1998, url: 'https://www.peraturan.go.id/files/kp171-1998.pdf', role: sabang_designation}
+    - {id: kp150-2000, url: 'https://peraturan.go.id/files/kp150-2000.pdf', role: programme_replacement}
+kapet_claims:
+  id: official_kapet_decrees
+  title: Official KAPET designation and programme instruments (partial indexed record)
+  publisher: Indonesian Government / JDIH BPK
+  landing_url: https://peraturan.bpk.go.id/
+  official_alternative: https://www.peraturan.go.id/
+kapet_article:
+  id: rothenberg_wang_chari_2025
+  title: "When regional policies fail: an evaluation of Indonesia's Integrated Economic Development Zones"
+  publisher: Journal of Development Economics / University of Sussex repository
+  landing_url: https://sussex.figshare.com/articles/journal_contribution/When_regional_policies_fail_an_evaluation_of_Indonesia_s_Integrated_Economic_Development_Zones/28646048
+  metadata_url: https://api.figshare.com/v2/articles/28646048
+  download_url: https://ndownloader.figshare.com/files/54267710
+  doi: 10.1016/j.jdeveco.2025.103503
+kek:
+  id: kek_official_registry
+  title: Official KEK website
+  publisher: Dewan Nasional KEK
+  landing_url: https://kek.go.id/
+  verified_detail_pages:
+    - https://kek.go.id/id/investment/distribution/kek-palu
+    - https://kek.go.id/id/investment/distribution/kek-nongsa
+osm_policy:
+  id: geofabrik_osm_policy
+  title: Dated OpenStreetMap administrative and place features for policy locations
+  publisher: Geofabrik / OpenStreetMap contributors
+  landing_url: https://download.geofabrik.de/asia/indonesia.html
+  version: '260924'
+  license: ODbL 1.0; © OpenStreetMap contributors
+  regions:
+    kalimantan: {url: 'https://download.geofabrik.de/asia/indonesia/kalimantan-260924-free.gpkg.zip', expected_bytes: 394182367}
+    papua: {url: 'https://download.geofabrik.de/asia/indonesia/papua-260924-free.gpkg.zip', expected_bytes: 94250871}
+    sulawesi: {url: 'https://download.geofabrik.de/asia/indonesia/sulawesi-260924-free.gpkg.zip', expected_bytes: 413955903}
+    sumatra: {url: 'https://download.geofabrik.de/asia/indonesia/sumatra-260924-free.gpkg.zip', expected_bytes: 751295591}
+    maluku: {url: 'https://download.geofabrik.de/asia/indonesia/maluku-260924-free.gpkg.zip', expected_bytes: 74893572}
+    nusa_tenggara: {url: 'https://download.geofabrik.de/asia/indonesia/nusa-tenggara-260924-free.gpkg.zip', expected_bytes: 467637153}

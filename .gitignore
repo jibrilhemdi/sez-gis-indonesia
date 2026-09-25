@@ -15,8 +15,8 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# Virtual environments. UV creates .venv/ by default. The environment is
-# reproducible from pyproject.toml + uv.lock, so the folder itself is disposable.
+# Project-local virtual environments. Installed versions for this run are in
+# docs/dependency_versions.txt; the environment folder is disposable.
 .venv/
 venv/
 env/
@@ -26,8 +26,7 @@ build/
 dist/
 *.egg-info/
 
-# NOTE: uv.lock is deliberately NOT ignored. Commit it — it pins exact package
-# versions so the project installs identically on another machine.
+# No lockfile is currently present. If one is added later, track it explicitly.
 
 
 # --- Notebooks -------------------------------------------------------------
@@ -146,3 +145,12 @@ outputs/
 *.log
 
 Industrial_Cluster_Location_Proposal.docx
+# Acquisition-specific additions
+data/manual/*
+!data/manual/.gitkeep
+.mplconfig/
+.cache/
+.uv-cache/
+.pytest_cache/
+logs/
+reports/figures/

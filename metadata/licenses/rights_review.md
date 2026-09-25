@@ -1,0 +1,18 @@
+# Dataset-specific rights review (2026-09-25)
+
+| Source | Download | Analysis | Redistribution |
+|---|---|---|---|
+| CIFOR Global Wetlands V3 | Guest book and terms action required; no raster downloaded | Terms describe research/education use, subject to review | Platform terms restrict disclosure/distribution and modification without prior written authorization; do not share raster or derived mask until resolved |
+| IMF PortWatch | Public ArcGIS query works | Public platform permits access; specific downstream terms require review | Unclear; do not redistribute raw or derived tables |
+| BIG/Kemenhub MapServer | Public query works | Terms not established | Unclear; do not redistribute |
+| BIG/Kementerian Pertanian peat-soil MapServer | Public query works for partial layer | Terms not established; government metadata identifies updated peat map | Unclear; do not redistribute |
+| IAPH Ports and Harbors June 1996 | Public PDF download works | Historical facts can be extracted with citation | Redistribution of PDF and derived table not established; review before sharing |
+| geoBoundaries IDN ADM0 | Public API and GeoJSON | API reports ODbL 1.0 for this boundary | Follow source-specific ODbL obligations; review attribution/share-alike for derivative database |
+| OSMData coastline | Public ZIP | OSM-derived data under ODbL | Attribution and ODbL obligations apply; review derived database terms |
+| Geofabrik dated Indonesia OSM GeoPackages (`260924`) | Six public archives with source sizes and SHA-256 checksums recorded | OSM modern place and boundary proxies under ODbL 1.0; credit © OpenStreetMap contributors | ODbL attribution and database sharing obligations apply to redistributed extracts or derived databases |
+| GEBCO_2026 | Official grid says public domain | Free use with attribution and disclaimer | Copy/distribution allowed with attribution; retain source and do not imply endorsement |
+| Official Indonesian decrees | Public legal PDFs indexed; some direct shell downloads time out | Article facts may be extracted with citation; annex maps still need review | Do not assume site files have open redistribution permission |
+| Rothenberg–Wang–Chari published KAPET article | University of Sussex repository public PDF | Repository marks article CC BY 4.0; this does not determine underlying data rights | Article redistribution follows CC BY 4.0 attribution; underlying data availability is on request |
+| KEK official website | Public pages | Facts may be extracted with source citation | Do not assume copied page/geometry has open redistribution permission |
+
+Source terms: [CIFOR platform](https://www2.cifor.org/global-wetlands/), [geoBoundaries API](https://www.geoboundaries.org/api.html), [OSMData coastlines](https://osmdata.openstreetmap.de/data/coastlines.html), [Geofabrik Indonesia](https://download.geofabrik.de/asia/indonesia.html), [OpenStreetMap copyright](https://www.openstreetmap.org/copyright), [GEBCO_2026 terms](https://www.gebco.net/data-products/gridded-bathymetry-data), [PortWatch](https://portwatch.imf.org/pages/data-and-methodology), [BIG port service](https://kspservices.big.go.id/satupeta/rest/services/PUBLIK/SARANA_PRASARANA/MapServer), [BIG peat service](https://kspservices.big.go.id/satupeta/rest/services/PUBLIK/SUMBER_DAYA_ALAM_DAN_LINGKUNGAN/MapServer/6), [IAPH document](https://www.iaphworldports.org/n-iaph/wp-content/uploads/ph/1996-5.pdf), [Sussex KAPET article](https://sussex.figshare.com/articles/journal_contribution/When_regional_policies_fail_an_evaluation_of_Indonesia_s_Integrated_Economic_Development_Zones/28646048), [BPK legal database](https://peraturan.bpk.go.id/), [KEK](https://kek.go.id/).

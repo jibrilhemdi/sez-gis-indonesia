@@ -8,14 +8,16 @@ Converting a retrospective policy failure into a prospective spatial instrument 
 
 ## Status
 
-**Early setup.** The research proposal is complete; the pipeline is not yet implemented. This repository currently holds the proposal and project scaffolding. See [Roadmap](#roadmap) for what is planned and in what order.
+**Acquisition pipeline executed on 25 September 2026.** The five scoped groups have different levels of readiness: PortWatch activity and current coast/bathymetry inputs were acquired and validated; peat, historical port, and policy evidence remain partial. The detailed results and limitations are in [the acquisition report](reports/acquisition_report.md) and [offline QA report](reports/qa_report.md). The research design below remains a proposal, not a claim that every required historical input is available.
+
+The Indonesia GEBCO rasters are ready for QGIS. A separate [policy location GeoPackage](data/processed/policy_treatment/2026-09-25/policy_location_proxies.gpkg) maps modern OSM proxies for documented KAPET places and KEK site candidates/reference points; it does not encode historical treatment. Use the [QGIS guide](docs/qgis_gebco_policy.md) for loading and styling. Reproducible source commands include `.venv/bin/python -m indo_data fetch --source gebco` and `.venv/bin/python -m indo_data fetch --source osm_policy`.
 
 | | |
 |---|---|
-| **Stage** | Proposal complete, implementation not started |
+| **Stage** | Five-group acquisition executed; historical suitability inputs and treatment geography incomplete |
 | **Proposal** | Full research proposal (July 2026) — circulated separately, not tracked in this repo |
 | **Timeline** | 9–12 months to first submission |
-| **Data** | 100% open / secondary — no primary collection, no human-subjects approval on the critical path |
+| **Data** | Secondary sources; each source's download, analysis, and redistribution rights are reviewed separately |
 
 ---
 
@@ -167,37 +169,35 @@ Each threat has a mitigation built into the design, and every mitigation for the
 
 ## Repository layout
 
-> **Planned.** Only the proposal, `README.md`, and `.gitignore` exist so far. This section is the target structure, not a description of what is here.
-
 ```
 .
 ├── data/
-│   ├── raw/          # downloaded as-is, never edited        (git-ignored)
-│   ├── interim/      # intermediate processing               (git-ignored)
-│   ├── processed/    # analysis-ready raster stack           (git-ignored)
-│   └── external/     # third-party reference layers          (git-ignored)
-├── src/              # reusable pipeline modules
-├── notebooks/        # Marimo notebooks (plain .py — tracked)
-├── scripts/          # data acquisition + build entry points
-├── figures/          # generated maps and plots              (git-ignored)
-└── outputs/          # model results, surfaces               (git-ignored)
+│   ├── raw/          # immutable source snapshots             (git-ignored)
+│   ├── manual/       # authorized manual imports              (git-ignored)
+│   └── processed/    # derived tables, vectors and rasters    (git-ignored)
+├── config/           # run settings, sources, transcribed legal claims
+├── src/indo_data/    # acquisition, processing and QA modules
+├── metadata/         # source catalog, evidence, rights and checksums
+├── docs/             # scope, methods, manual actions, progress
+├── reports/          # results, QA, figures and review queues
+└── tests/            # pipeline logic tests
 ```
 
-**Data is not in the repository.** GIS files are large binaries; GitHub rejects anything over 100 MB and a committed large file stays in history even after deletion. The repo carries *the script that fetches or builds the data*, not the data itself — which is also what makes the pipeline reproducible rather than merely archived. To commit a small reference file anyway: `git add -f path/to/file`.
+Large source and processed data stay in the local, Git-ignored `data/` tree. Metadata records relative paths, source IDs, checksums, transformations, and review status. Data are not published or automatically redistributable.
 
 ## Getting started
 
-> Not yet applicable — no pipeline code exists. Once Phase 1 lands, the intended workflow is:
-
 ```bash
-git clone https://github.com/jibrilhemdi/sez-gis-indonesia.git
-cd sez-gis-indonesia
-uv sync                      # reproduces the environment from uv.lock
-uv run scripts/fetch_data.py # download Tier A layers into data/raw/
-uv run scripts/01_prepare.py # build the raster stack
+python3 -m venv .venv
+.venv/bin/python -m pip install -e .
+.venv/bin/python -m indo_data discover
+.venv/bin/python -m indo_data fetch --all
+.venv/bin/python -m indo_data process --all
+.venv/bin/python -m indo_data validate
+.venv/bin/python -m indo_data report
 ```
 
-Python, managed with [uv](https://docs.astral.sh/uv/). `uv.lock` is committed deliberately — it pins exact versions so the environment rebuilds identically on another machine.
+The configured run date, source endpoints, bounds, limits, and grid choices are in `config/`. This environment's actual installed versions are recorded in [dependency_versions.txt](docs/dependency_versions.txt). The `run --all` command combines discovery through report generation. It can finish with a nonzero status when an official source is blocked; independently acquired files and their QA remain available. Offline `validate` and `report` do not need the network. See [manual_actions.md](docs/manual_actions.md) for rights-gated imports.
 
 ---
 

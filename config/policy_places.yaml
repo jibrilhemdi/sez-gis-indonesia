@@ -1,0 +1,914 @@
+# Manual transcription of named places in official designation articles.
+# Scope describes decree wording, never historical GIS geometry.
+places:
+- id: biak_biak_numfor
+  zone_id: kapet_biak
+  name: Biak Numfor
+  province_1998: Irian Jaya
+  region: papua
+  scope: partial_admin
+  level: 5
+  instrument: Keppres 90/1996
+  locator: Pasal 1(2)
+  url: https://peraturan.go.id/files/kp90-1996.pdf
+  note: Selected areas only; steering-team boundary required
+  designation_date_text: '1996'
+  date_precision: year
+- id: biak_manokwari
+  zone_id: kapet_biak
+  name: Manokwari
+  province_1998: Irian Jaya
+  region: papua
+  scope: partial_admin
+  level: 5
+  instrument: Keppres 90/1996
+  locator: Pasal 1(2)
+  url: https://peraturan.go.id/files/kp90-1996.pdf
+  note: Selected areas only
+  designation_date_text: '1996'
+  date_precision: year
+- id: biak_yapen_waropen
+  zone_id: kapet_biak
+  name: Yapen Waropen
+  province_1998: Irian Jaya
+  region: papua
+  scope: partial_admin
+  level: 5
+  instrument: Keppres 90/1996
+  locator: Pasal 1(2)
+  url: https://peraturan.go.id/files/kp90-1996.pdf
+  note: Historical regency split; selected areas only
+  designation_date_text: '1996'
+  date_precision: year
+- id: biak_paniai
+  zone_id: kapet_biak
+  name: Paniai
+  province_1998: Irian Jaya
+  region: papua
+  scope: partial_admin
+  level: 5
+  instrument: Keppres 90/1996
+  locator: Pasal 1(2)
+  url: https://peraturan.go.id/files/kp90-1996.pdf
+  note: Selected areas only
+  designation_date_text: '1996'
+  date_precision: year
+- id: biak_mimika
+  zone_id: kapet_biak
+  name: Mimika
+  province_1998: Irian Jaya
+  region: papua
+  scope: partial_admin
+  level: 5
+  instrument: Keppres 90/1996
+  locator: Pasal 1(2)
+  url: https://peraturan.go.id/files/kp90-1996.pdf
+  note: Historical administrative area; selected areas only
+  designation_date_text: '1996'
+  date_precision: year
+- id: batulicin_kotabaru
+  zone_id: kapet_batulicin
+  name: Kotabaru
+  province: Kalimantan Selatan
+  region: kalimantan
+  scope: whole_admin
+  level: 5
+  instrument: Keppres 11/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp11-1998.pdf
+  note: Modern regency excludes Tanah Bumbu created in 2003; current location proxy only
+  designation_date_text: '1998'
+  date_precision: year
+- id: sasamba_samarinda
+  zone_id: kapet_sasamba
+  name: Samarinda
+  province: Kalimantan Timur
+  region: kalimantan
+  scope: whole_admin
+  level: 5
+  instrument: Keppres 12/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp12-1998.pdf
+  note: Entire historical municipality
+  designation_date_text: '1998'
+  date_precision: year
+- id: sasamba_balikpapan
+  zone_id: kapet_sasamba
+  name: Balikpapan
+  province: Kalimantan Timur
+  region: kalimantan
+  scope: whole_admin
+  level: 5
+  instrument: Keppres 12/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp12-1998.pdf
+  note: Entire historical municipality
+  designation_date_text: '1998'
+  date_precision: year
+- id: sasamba_kutai
+  zone_id: kapet_sasamba
+  name: Kutai
+  province: Kalimantan Timur
+  region: kalimantan
+  scope: partial_admin
+  level: 5
+  instrument: Keppres 12/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp12-1998.pdf
+  note: Only named districts; historical regency changed
+  designation_date_text: '1998'
+  date_precision: year
+- id: sasamba_sanga_sanga
+  zone_id: kapet_sasamba
+  name: Sanga-Sanga
+  province: Kalimantan Timur
+  region: kalimantan
+  scope: partial_admin
+  level: 6
+  instrument: Keppres 12/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp12-1998.pdf
+  note: Named district; annex unavailable
+  designation_date_text: '1998'
+  date_precision: year
+- id: sasamba_muara_jawa
+  zone_id: kapet_sasamba
+  name: Muara Jawa
+  province: Kalimantan Timur
+  region: kalimantan
+  scope: partial_admin
+  level: 6
+  instrument: Keppres 12/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp12-1998.pdf
+  note: Named district; annex unavailable
+  designation_date_text: '1998'
+  date_precision: year
+- id: sasamba_loa_janan
+  zone_id: kapet_sasamba
+  name: Loa Janan
+  province: Kalimantan Timur
+  region: kalimantan
+  scope: partial_admin
+  level: 6
+  instrument: Keppres 12/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp12-1998.pdf
+  note: Named district; annex unavailable
+  designation_date_text: '1998'
+  date_precision: year
+- id: sasamba_semboja
+  zone_id: kapet_sasamba
+  name: Semboja
+  province: Kalimantan Timur
+  region: kalimantan
+  scope: partial_admin
+  level: 6
+  instrument: Keppres 12/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp12-1998.pdf
+  note: Decree spelling Semobja; modern Samboja uncertain
+  designation_date_text: '1998'
+  date_precision: year
+- id: sanggau_sanggau
+  zone_id: kapet_sanggau
+  name: Sanggau
+  province: Kalimantan Barat
+  region: kalimantan
+  scope: whole_admin
+  level: 5
+  instrument: Keppres 13/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp13-1998.pdf
+  note: Historical regency changed; current location proxy only
+  designation_date_text: '1998'
+  date_precision: year
+- id: sanggau_sambas
+  zone_id: kapet_sanggau
+  name: Sambas
+  province: Kalimantan Barat
+  region: kalimantan
+  scope: whole_admin
+  level: 5
+  instrument: Keppres 13/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp13-1998.pdf
+  note: Historical regency changed; current location proxy only
+  designation_date_text: '1998'
+  date_precision: year
+- id: sanggau_pontianak
+  zone_id: kapet_sanggau
+  name: Pontianak
+  province: Kalimantan Barat
+  region: kalimantan
+  scope: partial_admin
+  level: 5
+  instrument: Keppres 13/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp13-1998.pdf
+  note: Only Air Besar; Pontianak ambiguous city/regency name
+  match_blocked_reason: Historical Kabupaten Pontianak is not modern Kota Pontianak; current name collision
+  designation_date_text: '1998'
+  date_precision: year
+- id: sanggau_air_besar
+  zone_id: kapet_sanggau
+  name: Air Besar
+  province: Kalimantan Barat
+  region: kalimantan
+  scope: partial_admin
+  level: 6
+  instrument: Keppres 13/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp13-1998.pdf
+  note: Named district; annex unavailable
+  designation_date_text: '1998'
+  date_precision: year
+- id: manado_bitung
+  zone_id: kapet_manado_bitung
+  name: Bitung
+  province: Sulawesi Utara
+  region: sulawesi
+  scope: whole_admin
+  level: 5
+  instrument: Keppres 14/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp14-1998.pdf
+  note: Entire historical municipality
+  designation_date_text: '1998'
+  date_precision: year
+- id: manado_manado
+  zone_id: kapet_manado_bitung
+  name: Manado
+  province: Sulawesi Utara
+  region: sulawesi
+  scope: whole_admin
+  level: 5
+  instrument: Keppres 14/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp14-1998.pdf
+  note: Entire historical municipality
+  designation_date_text: '1998'
+  date_precision: year
+- id: manado_minahasa
+  zone_id: kapet_manado_bitung
+  name: Minahasa
+  province: Sulawesi Utara
+  region: sulawesi
+  scope: partial_admin
+  level: 5
+  instrument: Keppres 14/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp14-1998.pdf
+  note: Only listed districts; historical regency split
+  designation_date_text: '1998'
+  date_precision: year
+- id: mbay_ngada
+  zone_id: kapet_mbay
+  name: Ngada
+  province: Nusa Tenggara Timur
+  region: nusa_tenggara
+  scope: whole_admin
+  level: 5
+  instrument: Keppres 15/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp15-1998.pdf
+  note: Historical regency changed; current location proxy only
+  designation_date_text: '1998'
+  date_precision: year
+- id: pare_pare
+  zone_id: kapet_pare_pare
+  name: Parepare
+  province: Sulawesi Selatan
+  region: sulawesi
+  scope: whole_admin
+  level: 5
+  instrument: Keppres 164/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.bpk.go.id/Download/48966/Keputusan_Presiden_no_164%20TH%201998.pdf
+  note: Entire historical municipality; Pare-Pare spelling in decree
+  designation_date_text: '1998'
+  date_precision: year
+- id: pare_barru
+  zone_id: kapet_pare_pare
+  name: Barru
+  province: Sulawesi Selatan
+  region: sulawesi
+  scope: whole_admin
+  level: 5
+  instrument: Keppres 164/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.bpk.go.id/Download/48966/Keputusan_Presiden_no_164%20TH%201998.pdf
+  note: Entire historical regency
+  designation_date_text: '1998'
+  date_precision: year
+- id: pare_pinrang
+  zone_id: kapet_pare_pare
+  name: Pinrang
+  province: Sulawesi Selatan
+  region: sulawesi
+  scope: whole_admin
+  level: 5
+  instrument: Keppres 164/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.bpk.go.id/Download/48966/Keputusan_Presiden_no_164%20TH%201998.pdf
+  note: Entire historical regency
+  designation_date_text: '1998'
+  date_precision: year
+- id: pare_sidenreng_rappang
+  zone_id: kapet_pare_pare
+  name: Sidenreng Rappang
+  province: Sulawesi Selatan
+  region: sulawesi
+  scope: whole_admin
+  level: 5
+  instrument: Keppres 164/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.bpk.go.id/Download/48966/Keputusan_Presiden_no_164%20TH%201998.pdf
+  note: Entire historical regency
+  designation_date_text: '1998'
+  date_precision: year
+- id: pare_enrekang
+  zone_id: kapet_pare_pare
+  name: Enrekang
+  province: Sulawesi Selatan
+  region: sulawesi
+  scope: whole_admin
+  level: 5
+  instrument: Keppres 164/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.bpk.go.id/Download/48966/Keputusan_Presiden_no_164%20TH%201998.pdf
+  note: Entire historical regency
+  designation_date_text: '1998'
+  date_precision: year
+- id: seram_seram
+  zone_id: kapet_seram
+  name: Seram
+  province: Maluku
+  region: maluku
+  scope: whole_island
+  level: 0
+  instrument: Keppres 165/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp165-1998.pdf
+  note: Entire island named, but OSM administrative polygons are not island shoreline
+  designation_date_text: '1998'
+  date_precision: year
+- id: seram_boano
+  zone_id: kapet_seram
+  name: Boano
+  province: Maluku
+  region: maluku
+  scope: whole_island
+  level: 0
+  instrument: Keppres 165/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp165-1998.pdf
+  note: Entire island; island polygon identification pending
+  designation_date_text: '1998'
+  date_precision: year
+- id: seram_manipa
+  zone_id: kapet_seram
+  name: Manipa
+  province: Maluku
+  region: maluku
+  scope: whole_island
+  level: 0
+  instrument: Keppres 165/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp165-1998.pdf
+  note: Entire island; island polygon identification pending
+  designation_date_text: '1998'
+  date_precision: year
+- id: seram_kelang
+  zone_id: kapet_seram
+  name: Kelang
+  province: Maluku
+  region: maluku
+  scope: whole_island
+  level: 0
+  instrument: Keppres 165/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp165-1998.pdf
+  note: Entire island; island polygon identification pending
+  designation_date_text: '1998'
+  date_precision: year
+- id: bima_bima
+  zone_id: kapet_bima
+  name: Bima
+  province: Nusa Tenggara Barat
+  region: nusa_tenggara
+  scope: whole_admin
+  level: 5
+  instrument: Keppres 166/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp166-1998.pdf
+  note: Current Bima excludes Kota Bima created in 2002; current location proxy only
+  designation_date_text: '1998'
+  date_precision: year
+- id: bima_dompu
+  zone_id: kapet_bima
+  name: Dompu
+  province: Nusa Tenggara Barat
+  region: nusa_tenggara
+  scope: whole_admin
+  level: 5
+  instrument: Keppres 166/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp166-1998.pdf
+  note: Entire historical regency
+  designation_date_text: '1998'
+  date_precision: year
+- id: batui_banggai
+  zone_id: kapet_batui
+  name: Banggai
+  province: Sulawesi Tengah
+  region: sulawesi
+  scope: partial_admin
+  level: 5
+  instrument: Keppres 167/1998
+  locator: Pasal 1(1)-(2) and map annex
+  url: https://peraturan.go.id/files/kp167-1998.pdf
+  note: Only listed districts; wording seluruh sebagian ambiguous
+  designation_date_text: '1998'
+  date_precision: year
+- id: batui_luwuk
+  zone_id: kapet_batui
+  name: Luwuk
+  province: Sulawesi Tengah
+  region: sulawesi
+  scope: partial_admin
+  level: 6
+  instrument: Keppres 167/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp167-1998.pdf
+  note: Named district; annex unavailable
+  designation_date_text: '1998'
+  date_precision: year
+- id: batui_kintom
+  zone_id: kapet_batui
+  name: Kintom
+  province: Sulawesi Tengah
+  region: sulawesi
+  scope: partial_admin
+  level: 6
+  instrument: Keppres 167/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp167-1998.pdf
+  note: Named district; annex unavailable
+  designation_date_text: '1998'
+  date_precision: year
+- id: batui_batui
+  zone_id: kapet_batui
+  name: Batui
+  province: Sulawesi Tengah
+  region: sulawesi
+  scope: partial_admin
+  level: 6
+  instrument: Keppres 167/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp167-1998.pdf
+  note: Named district; annex unavailable
+  designation_date_text: '1998'
+  date_precision: year
+- id: batui_toili
+  zone_id: kapet_batui
+  name: Toili
+  province: Sulawesi Tengah
+  region: sulawesi
+  scope: partial_admin
+  level: 6
+  instrument: Keppres 167/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp167-1998.pdf
+  note: Named district; annex unavailable
+  designation_date_text: '1998'
+  date_precision: year
+- id: bukari_buton
+  zone_id: kapet_bukari
+  name: Buton
+  province: Sulawesi Tenggara
+  region: sulawesi
+  scope: partial_admin
+  level: 5
+  instrument: Keppres 168/1998
+  locator: Pasal 1(1)-(2) and map annex
+  url: https://peraturan.go.id/files/kp168-1998.pdf
+  note: Selected area only
+  designation_date_text: '1998'
+  date_precision: year
+- id: bukari_kolaka
+  zone_id: kapet_bukari
+  name: Kolaka
+  province: Sulawesi Tenggara
+  region: sulawesi
+  scope: partial_admin
+  level: 5
+  instrument: Keppres 168/1998
+  locator: Pasal 1(1)-(2) and map annex
+  url: https://peraturan.go.id/files/kp168-1998.pdf
+  note: Selected area only
+  designation_date_text: '1998'
+  date_precision: year
+- id: bukari_kendari
+  zone_id: kapet_bukari
+  name: Kendari
+  province: Sulawesi Tenggara
+  region: sulawesi
+  scope: partial_admin
+  level: 5
+  instrument: Keppres 168/1998
+  locator: Pasal 1(1)-(2) and map annex
+  url: https://peraturan.go.id/files/kp168-1998.pdf
+  note: Selected area of historical regency; ambiguous current city/regency
+  match_blocked_reason: Historical Kabupaten Kendari is not modern Kota Kendari; current name collision
+  designation_date_text: '1998'
+  date_precision: year
+- id: benaviq_viqueque
+  zone_id: kapet_benaviq
+  name: Viqueque
+  region: outside_indonesia
+  scope: partial_admin
+  level: 5
+  instrument: Keppres 169/1998
+  locator: Pasal 1(1)-(2) and map annex
+  url: https://peraturan.go.id/files/kp169-1998.pdf
+  note: Historical Timor Timur; outside current Indonesia; wording seluruh sebagian ambiguous
+  designation_date_text: '1998'
+  date_precision: year
+- id: benaviq_manatuto
+  zone_id: kapet_benaviq
+  name: Manatuto
+  region: outside_indonesia
+  scope: partial_admin
+  level: 5
+  instrument: Keppres 169/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp169-1998.pdf
+  note: Historical Timor Timur; outside current Indonesia
+  designation_date_text: '1998'
+  date_precision: year
+- id: benaviq_manufahi
+  zone_id: kapet_benaviq
+  name: Manufahi
+  region: outside_indonesia
+  scope: partial_admin
+  level: 5
+  instrument: Keppres 169/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp169-1998.pdf
+  note: Historical Timor Timur; outside current Indonesia
+  designation_date_text: '1998'
+  date_precision: year
+- id: kakab_kapuas
+  zone_id: kapet_das_kakab
+  name: Kapuas
+  province: Kalimantan Tengah
+  region: kalimantan
+  scope: partial_admin
+  level: 5
+  instrument: Keppres 170/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp170-1998.pdf
+  note: Wording seluruh sebagian ambiguous; no whole regency polygon
+  designation_date_text: '1998-09-22'
+  date_precision: day
+- id: kakab_barito_selatan
+  zone_id: kapet_das_kakab
+  name: Barito Selatan
+  province: Kalimantan Tengah
+  region: kalimantan
+  scope: partial_admin
+  level: 5
+  instrument: Keppres 170/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp170-1998.pdf
+  note: Selected area only
+  designation_date_text: '1998-09-22'
+  date_precision: day
+- id: kakab_palangkaraya
+  zone_id: kapet_das_kakab
+  name: Palangkaraya
+  province: Kalimantan Tengah
+  region: kalimantan
+  scope: whole_admin
+  level: 5
+  instrument: Keppres 170/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp170-1998.pdf
+  note: Entire historical municipality; modern Palangka Raya spelling
+  aliases:
+  - Palangka Raya
+  designation_date_text: '1998-09-22'
+  date_precision: day
+- id: sabang_sabang
+  zone_id: kapet_sabang
+  name: Sabang
+  province: Aceh
+  region: sumatra
+  scope: whole_admin
+  level: 5
+  instrument: Keppres 171/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp171-1998.pdf
+  note: Entire historical municipality
+  designation_date_text: '1998'
+  date_precision: year
+- id: sabang_weh
+  zone_id: kapet_sabang
+  name: Weh
+  province: Aceh
+  region: sumatra
+  scope: whole_island
+  level: 0
+  instrument: Keppres 171/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp171-1998.pdf
+  note: Entire island; island polygon identification pending
+  designation_date_text: '1998'
+  date_precision: year
+- id: sabang_nasi
+  zone_id: kapet_sabang
+  name: Nasi
+  province: Aceh
+  region: sumatra
+  scope: whole_island
+  level: 0
+  instrument: Keppres 171/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp171-1998.pdf
+  note: Entire island; island polygon identification pending
+  designation_date_text: '1998'
+  date_precision: year
+- id: sabang_breuh
+  zone_id: kapet_sabang
+  name: Breuh
+  province: Aceh
+  region: sumatra
+  scope: whole_island
+  level: 0
+  instrument: Keppres 171/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp171-1998.pdf
+  note: Entire island; island polygon identification pending
+  designation_date_text: '1998'
+  date_precision: year
+- id: sabang_teunon
+  zone_id: kapet_sabang
+  name: Teunon
+  province: Aceh
+  region: sumatra
+  scope: whole_island
+  level: 0
+  instrument: Keppres 171/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp171-1998.pdf
+  note: Entire island; island polygon identification pending
+  designation_date_text: '1998'
+  date_precision: year
+- id: manado_likupang
+  zone_id: kapet_manado_bitung
+  name: Likupang
+  province: Sulawesi Utara
+  region: sulawesi
+  scope: partial_admin
+  level: 6
+  instrument: Keppres 14/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp14-1998.pdf
+  note: Named historical Minahasa district; modern district identity and annex boundary need review
+  designation_date_text: '1998'
+  date_precision: year
+- id: manado_dimembe
+  zone_id: kapet_manado_bitung
+  name: Dimembe
+  province: Sulawesi Utara
+  region: sulawesi
+  scope: partial_admin
+  level: 6
+  instrument: Keppres 14/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp14-1998.pdf
+  note: Named historical Minahasa district; modern district identity and annex boundary need review
+  designation_date_text: '1998'
+  date_precision: year
+- id: manado_airmadidi
+  zone_id: kapet_manado_bitung
+  name: Airmadidi
+  province: Sulawesi Utara
+  region: sulawesi
+  scope: partial_admin
+  level: 6
+  instrument: Keppres 14/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp14-1998.pdf
+  note: Named historical Minahasa district; modern district identity and annex boundary need review
+  designation_date_text: '1998'
+  date_precision: year
+- id: manado_kauditan
+  zone_id: kapet_manado_bitung
+  name: Kauditan
+  province: Sulawesi Utara
+  region: sulawesi
+  scope: partial_admin
+  level: 6
+  instrument: Keppres 14/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp14-1998.pdf
+  note: Named historical Minahasa district; modern district identity and annex boundary need review
+  designation_date_text: '1998'
+  date_precision: year
+- id: manado_wori
+  zone_id: kapet_manado_bitung
+  name: Wori
+  province: Sulawesi Utara
+  region: sulawesi
+  scope: partial_admin
+  level: 6
+  instrument: Keppres 14/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp14-1998.pdf
+  note: Named historical Minahasa district; modern district identity and annex boundary need review
+  designation_date_text: '1998'
+  date_precision: year
+- id: manado_pineleng
+  zone_id: kapet_manado_bitung
+  name: Pineleng
+  province: Sulawesi Utara
+  region: sulawesi
+  scope: partial_admin
+  level: 6
+  instrument: Keppres 14/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp14-1998.pdf
+  note: Named historical Minahasa district; modern district identity and annex boundary need review
+  designation_date_text: '1998'
+  date_precision: year
+- id: manado_tombariri
+  zone_id: kapet_manado_bitung
+  name: Tombariri
+  province: Sulawesi Utara
+  region: sulawesi
+  scope: partial_admin
+  level: 6
+  instrument: Keppres 14/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp14-1998.pdf
+  note: Named historical Minahasa district; modern district identity and annex boundary need review
+  designation_date_text: '1998'
+  date_precision: year
+- id: manado_tomohon
+  zone_id: kapet_manado_bitung
+  name: Tomohon
+  province: Sulawesi Utara
+  region: sulawesi
+  scope: partial_admin
+  level: 6
+  instrument: Keppres 14/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp14-1998.pdf
+  note: Named historical Minahasa district; modern district identity and annex boundary need review
+  designation_date_text: '1998'
+  date_precision: year
+- id: manado_tondano
+  zone_id: kapet_manado_bitung
+  name: Tondano
+  province: Sulawesi Utara
+  region: sulawesi
+  scope: partial_admin
+  level: 6
+  instrument: Keppres 14/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp14-1998.pdf
+  note: Named historical Minahasa district; modern district identity and annex boundary need review
+  designation_date_text: '1998'
+  date_precision: year
+- id: manado_toulimambot
+  zone_id: kapet_manado_bitung
+  name: Toulimambot
+  province: Sulawesi Utara
+  region: sulawesi
+  scope: partial_admin
+  level: 6
+  instrument: Keppres 14/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp14-1998.pdf
+  note: Named historical Minahasa district; modern district identity and annex boundary need review
+  designation_date_text: '1998'
+  date_precision: year
+- id: manado_eris
+  zone_id: kapet_manado_bitung
+  name: Eris
+  province: Sulawesi Utara
+  region: sulawesi
+  scope: partial_admin
+  level: 6
+  instrument: Keppres 14/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp14-1998.pdf
+  note: Named historical Minahasa district; modern district identity and annex boundary need review
+  designation_date_text: '1998'
+  date_precision: year
+- id: manado_lembean_timur
+  zone_id: kapet_manado_bitung
+  name: Lembean Timur
+  province: Sulawesi Utara
+  region: sulawesi
+  scope: partial_admin
+  level: 6
+  instrument: Keppres 14/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp14-1998.pdf
+  note: Named historical Minahasa district; modern district identity and annex boundary need review
+  designation_date_text: '1998'
+  date_precision: year
+- id: manado_kombi
+  zone_id: kapet_manado_bitung
+  name: Kombi
+  province: Sulawesi Utara
+  region: sulawesi
+  scope: partial_admin
+  level: 6
+  instrument: Keppres 14/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp14-1998.pdf
+  note: Named historical Minahasa district; modern district identity and annex boundary need review
+  designation_date_text: '1998'
+  date_precision: year
+- id: manado_kakas
+  zone_id: kapet_manado_bitung
+  name: Kakas
+  province: Sulawesi Utara
+  region: sulawesi
+  scope: partial_admin
+  level: 6
+  instrument: Keppres 14/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp14-1998.pdf
+  note: Named historical Minahasa district; modern district identity and annex boundary need review
+  designation_date_text: '1998'
+  date_precision: year
+- id: manado_remboken
+  zone_id: kapet_manado_bitung
+  name: Remboken
+  province: Sulawesi Utara
+  region: sulawesi
+  scope: partial_admin
+  level: 6
+  instrument: Keppres 14/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp14-1998.pdf
+  note: Named historical Minahasa district; modern district identity and annex boundary need review
+  designation_date_text: '1998'
+  date_precision: year
+- id: manado_sonder
+  zone_id: kapet_manado_bitung
+  name: Sonder
+  province: Sulawesi Utara
+  region: sulawesi
+  scope: partial_admin
+  level: 6
+  instrument: Keppres 14/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp14-1998.pdf
+  note: Named historical Minahasa district; modern district identity and annex boundary need review
+  designation_date_text: '1998'
+  date_precision: year
+- id: manado_kawangkoan
+  zone_id: kapet_manado_bitung
+  name: Kawangkoan
+  province: Sulawesi Utara
+  region: sulawesi
+  scope: partial_admin
+  level: 6
+  instrument: Keppres 14/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp14-1998.pdf
+  note: Named historical Minahasa district; modern district identity and annex boundary need review
+  designation_date_text: '1998'
+  date_precision: year
+- id: manado_tompaso
+  zone_id: kapet_manado_bitung
+  name: Tompaso
+  province: Sulawesi Utara
+  region: sulawesi
+  scope: partial_admin
+  level: 6
+  instrument: Keppres 14/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp14-1998.pdf
+  note: Named historical Minahasa district; modern district identity and annex boundary need review
+  designation_date_text: '1998'
+  date_precision: year
+- id: manado_langowan
+  zone_id: kapet_manado_bitung
+  name: Langowan
+  province: Sulawesi Utara
+  region: sulawesi
+  scope: partial_admin
+  level: 6
+  instrument: Keppres 14/1998
+  locator: Pasal 1(2) and map annex
+  url: https://peraturan.go.id/files/kp14-1998.pdf
+  note: Named historical Minahasa district; modern district identity and annex boundary need review
+  designation_date_text: '1998'
+  date_precision: year

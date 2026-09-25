@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "indo-data"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = ["requests>=2.32", "PyYAML>=6", "pandas>=2.2", "pyarrow>=17", "geopandas>=1", "rasterio>=1.4", "pypdf>=6", "netCDF4>=1.7", "matplotlib>=3.9"]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

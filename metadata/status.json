@@ -1,0 +1,229 @@
+{
+  "geoboundaries_idn_adm0": {
+    "acquisition_status": "verified",
+    "detail": "ADM0 GeoJSON reopened and valid; national selection boundary",
+    "updated_at": "2026-09-25T18:36:48+00:00",
+    "features": 1,
+    "bounds": [
+      95.01098450000003,
+      -11.007826099999981,
+      141.01944440000005,
+      5.907234800000012
+    ]
+  },
+  "imf_portwatch_daily": {
+    "acquisition_status": "verified",
+    "detail": "Daily, monthly, annual tables processed",
+    "updated_at": "2026-09-25T18:37:00+00:00",
+    "rows": 284618,
+    "first_observed_date": "2019-01-01",
+    "last_observed_date": "2026-09-18",
+    "ports": 101
+  },
+  "imf_portwatch_ports": {
+    "acquisition_status": "verified",
+    "detail": "ArcGIS IDs reconciled; 101 current points reopened as valid geometry",
+    "updated_at": "2026-09-25T18:37:00+00:00",
+    "rows": 101
+  },
+  "big_kemenhub_ports": {
+    "acquisition_status": "partial",
+    "detail": "Current inventory verified; historical presence and geometry unresolved",
+    "updated_at": "2026-09-25T18:37:00+00:00",
+    "rows": 2505,
+    "year_field_audit": [
+      {
+        "layer_id": 1,
+        "field": "thn_bng",
+        "rows": 527,
+        "valid_years": 2,
+        "missing": 0,
+        "sentinel_or_invalid": 525,
+        "raw_values_outside_range": "0"
+      },
+      {
+        "layer_id": 1,
+        "field": "thn_kmb",
+        "rows": 527,
+        "valid_years": 2,
+        "missing": 0,
+        "sentinel_or_invalid": 525,
+        "raw_values_outside_range": "0"
+      },
+      {
+        "layer_id": 1,
+        "field": "thn_ops",
+        "rows": 527,
+        "valid_years": 2,
+        "missing": 0,
+        "sentinel_or_invalid": 525,
+        "raw_values_outside_range": "0"
+      },
+      {
+        "layer_id": 3,
+        "field": "thn_bng",
+        "rows": 1978,
+        "valid_years": 0,
+        "missing": 0,
+        "sentinel_or_invalid": 1978,
+        "raw_values_outside_range": "-"
+      },
+      {
+        "layer_id": 3,
+        "field": "thn_kmb",
+        "rows": 1978,
+        "valid_years": 0,
+        "missing": 0,
+        "sentinel_or_invalid": 1978,
+        "raw_values_outside_range": "-"
+      },
+      {
+        "layer_id": 3,
+        "field": "thn_ops",
+        "rows": 1978,
+        "valid_years": 0,
+        "missing": 0,
+        "sentinel_or_invalid": 1978,
+        "raw_values_outside_range": "-"
+      }
+    ]
+  },
+  "osmdata_coastlines": {
+    "acquisition_status": "partial",
+    "detail": "Regional processed coastline verified; country segment attribution unresolved",
+    "updated_at": "2026-09-25T18:37:05+00:00",
+    "features": 22086,
+    "bbox": [
+      93.3107525,
+      -13.5337151,
+      143.558646,
+      8.5227619
+    ],
+    "crs": "EPSG:4326",
+    "classification": "regional coast; Indonesia/context attribution unresolved"
+  },
+  "cifor_global_wetlands_v3": {
+    "acquisition_status": "manual_required",
+    "detail": "CIFOR guest book and terms require human action",
+    "updated_at": "2026-09-25T19:36:43+00:00"
+  },
+  "jdih_bpk_keppres_89_1996": {
+    "acquisition_status": "access_denied",
+    "detail": "BPK legal page returned Cloudflare 403; official peraturan.go.id PDF host timed out in shell. Indexed official text supports partial claims, but native PDFs were not acquired.",
+    "updated_at": "2026-09-25T18:25:20+00:00"
+  },
+  "kek_official_registry": {
+    "acquisition_status": "partial",
+    "detail": "Official KEK detail pages verified; registry incomplete, no legal dates or polygons",
+    "updated_at": "2026-09-25T18:37:13+00:00",
+    "rows": 2
+  },
+  "big_kemenhub_ports_1": {
+    "acquisition_status": "verified",
+    "detail": "ArcGIS ID and count reconciliation",
+    "updated_at": "2026-09-25T18:04:26+00:00",
+    "count": 527,
+    "server_count_final": 527,
+    "stable_snapshot": true,
+    "data_last_edit_date": null,
+    "folder": "data/raw/big_kemenhub_ports/2026-09-25/layer_1"
+  },
+  "big_kemenhub_ports_3": {
+    "acquisition_status": "verified",
+    "detail": "ArcGIS ID and count reconciliation",
+    "updated_at": "2026-09-25T18:04:28+00:00",
+    "count": 1978,
+    "server_count_final": 1978,
+    "stable_snapshot": true,
+    "data_last_edit_date": null,
+    "folder": "data/raw/big_kemenhub_ports/2026-09-25/layer_3"
+  },
+  "big_peta_lahan_gambut": {
+    "acquisition_status": "partial",
+    "detail": "Verified supplementary government peat polygons; only regional coverage, not CIFOR substitute",
+    "updated_at": "2026-09-25T18:37:05+00:00",
+    "features": 146,
+    "bounds": [
+      108.86017326100006,
+      -3.46058131999996,
+      118.57645895300004,
+      4.070093808000024
+    ],
+    "crs": "EPSG:4326",
+    "usda1_values": [
+      "Terric Haplohemists",
+      "Terric Haplosaprists",
+      "Terric Sulfihemists",
+      "Typic Haplofibrists",
+      "Typic Haplohemists",
+      "Typic Haplosaprists",
+      "Typic Sulfihemists"
+    ]
+  },
+  "gebco_2026": {
+    "acquisition_status": "verified",
+    "detail": "Native-resolution elevation and TID GeoTIFFs reopened; signed elevation and TID categories retained",
+    "updated_at": "2026-09-25T18:37:13+00:00",
+    "elevation": {
+      "shape": [
+        5040,
+        12000
+      ],
+      "bounds": [
+        92.99999999999994,
+        -13.000000000267363,
+        143.0000000006366,
+        8.000000000000028
+      ],
+      "path": "data/processed/coast_bathymetry/2026-09-25/gebco_2026_elevation_regional.tif"
+    },
+    "tid": {
+      "shape": [
+        5040,
+        12000
+      ],
+      "bounds": [
+        92.99999999999994,
+        -13.000000000267363,
+        143.0000000006366,
+        8.000000000000028
+      ],
+      "path": "data/processed/coast_bathymetry/2026-09-25/gebco_2026_tid_regional.tif"
+    }
+  },
+  "iaph_ports_harbors_1996_06": {
+    "acquisition_status": "partial",
+    "detail": "Seven ports documented in 1991–1995 table; current identity and historic geometry unresolved",
+    "updated_at": "2026-09-25T19:45:33+00:00",
+    "ports": 7,
+    "documented_reference_years": [
+      1992,
+      1995
+    ],
+    "unsupported_reference_years": [
+      2000
+    ]
+  },
+  "official_kapet_decrees": {
+    "acquisition_status": "partial",
+    "detail": "Fourteen source-backed designation instruments; named places recorded; annex and historical geometry incomplete",
+    "updated_at": "2026-09-25T19:44:48+00:00",
+    "zones": 14,
+    "places": 70,
+    "programme_events": 4
+  },
+  "rothenberg_wang_chari_2025": {
+    "acquisition_status": "verified",
+    "detail": "Published PDF reopened; data availability statement on page 22: available on request",
+    "updated_at": "2026-09-25T19:45:33+00:00"
+  },
+  "geofabrik_osm_policy": {
+    "acquisition_status": "verified",
+    "detail": "Six dated OSM extracts matched to legal place claims; modern proxy GIS and unresolved queue produced",
+    "updated_at": "2026-09-25T19:44:56+00:00",
+    "polygons": 16,
+    "review_points": 12,
+    "kek_reference_points": 2,
+    "unresolved": 42
+  }
+}

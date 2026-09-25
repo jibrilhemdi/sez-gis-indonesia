@@ -1,0 +1,18 @@
+country_iso3: IDN
+outcome_years: [1992, 2020]
+proposal_predictor_window: [1992, 2000]
+historical_port_reference_years: [1992, 1995, 2000]
+port_activity_requested_start: '2019-01-01'
+as_of_date: '2026-09-25'
+grid_sizes_m: [10000, 5000, 25000]
+grid_equal_area_crs: EPSG:6933
+coastal_context_buffer_km: 200
+build_grid_features: false
+max_single_download_gb: 2
+max_total_download_gb: 8
+max_parallel_downloads: 2
+http_timeout_s: 60
+http_retries: 3
+arcgis_batch_size: 1000
+gebco_block_rows: 128
+coast_context_bbox: [93, -13, 143, 8]
