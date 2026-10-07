@@ -174,16 +174,61 @@ Each threat has a mitigation built into the design, and every mitigation for the
 ├── data/
 │   ├── raw/          # immutable source snapshots             (git-ignored)
 │   ├── manual/       # authorized manual imports              (git-ignored)
+│   ├── interim/      # rebuildable intermediates, e.g. GHSL mosaics (git-ignored)
 │   └── processed/    # derived tables, vectors and rasters    (git-ignored)
-├── config/           # run settings, sources, transcribed legal claims
+├── config/           # run settings, sources, transcribed legal claims, map layers
 ├── src/indo_data/    # acquisition, processing and QA modules
+├── scripts/          # standalone fetch and map scripts (run with `uv run --script`)
+├── map/              # index.html — the data map, built from config/map_layers.yaml
 ├── metadata/         # source catalog, evidence, rights and checksums
-├── docs/             # scope, methods, manual actions, progress
+├── docs/             # scope, methods, manual actions, progress, data register
 ├── reports/          # results, QA, figures and review queues
 └── tests/            # pipeline logic tests
 ```
 
 Large source and processed data stay in the local, Git-ignored `data/` tree. Metadata records relative paths, source IDs, checksums, transformations, and review status. Data are not published or automatically redistributable.
+
+## The data map
+
+`map/index.html` is one self-contained page showing every layer collected so far — open it in
+a browser straight from disk; it makes no network requests. GHSL built-up, volume, population
+and degree of urbanisation have an epoch slider (1990–2020). It is a **display copy**:
+geometry simplified to ~550 m, rasters resampled to screen resolution. Read it for *where*,
+never for *how much*.
+
+**To add a layer:**
+
+1. Add an entry to `config/map_layers.yaml` — copy one in the right section and change
+   `name`, `path`, `group` and `note`. Vector files can be any format GDAL reads (`.gpkg`
+   with `layer:`, `.geojson`, `.shp`) in any CRS; they are reprojected on the way in.
+   Sections `ports` and `policy` are ready and empty, and there is a commented example for
+   `policy_location_proxies.gpkg`.
+2. Rebuild:
+   ```
+   uv run --script scripts/build_raster_overlays.py   # only if you added/changed a raster (slow)
+   uv run --script scripts/build_map.py               # always (fast)
+   ```
+   A layer whose file is missing on your machine is skipped with a warning. The build
+   refuses to write a page over 50 MB (GitHub's warning size).
+
+**Two maps come out of every build.** `map/index.html` (committed) leaves out every layer
+marked `local_only: true`; `outputs/map/index.html` (git-ignored, your machine only) has
+everything. All BIG layers are `local_only` until BIG's redistribution terms are confirmed
+(`docs/data-register.md` §4.7) — so the committed map shows the GHSL, WorldPop and terrain
+rasters but not roads, rivers or coastlines. Give every new layer a `credit:` too; the
+map's attribution line is built from the layers it actually contains.
+
+The scripts need only [uv](https://docs.astral.sh/uv/): each declares its own dependencies
+in its header, so there is no environment to set up.
+
+**Getting the GHSL data** (1.8 GB, 504 tiles covering Indonesia, 1990–2020):
+```
+uv run --script scripts/fetch_ghsl.py
+uv run --script scripts/build_ghsl_mosaics.py
+```
+`docs/data-register.md` records where every dataset on the map came from, its epoch and its
+licence; `docs/data-collected.md` what each is for; `docs/considerations.md` the
+methodological choices each one forces.
 
 ## Getting started
 
