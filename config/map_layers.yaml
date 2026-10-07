@@ -1,0 +1,403 @@
+# ---------------------------------------------------------------------------
+# map_layers.yaml — every layer on the data map (map/index.html)
+#
+# The map is BUILT from this list:
+#   uv run --script scripts/build_raster_overlays.py   # only if a raster changed (slow)
+#   uv run --script scripts/build_map.py               # always (fast)
+#
+# TO ADD A LAYER: copy an entry in the right section, change `name`, `path`
+# and `note`, and rebuild. Nothing else in the code needs to change.
+#
+# * `path` is relative to the repository root.
+# * A layer whose file is missing is SKIPPED with a printed warning, so a
+#   colleague without some dataset can still build the map.
+# * `note` is shown when the layer name is clicked. Say what the layer is,
+#   its epoch, and what it must NOT be used for — the caveat is usually the
+#   most useful line.
+# * Epoch matters: the model needs predictors c. 1992–2000 and outcomes over
+#   1992–2020. A contemporary layer goes in group `contemporary`.
+# ---------------------------------------------------------------------------
+
+# Sidebar sections, top to bottom. `id` is what layers refer to.
+groups:
+  - {id: agglomeration, title: "Agglomeration, 1990–2020"}
+  - {id: contemporary,  title: "Contemporary (exploratory — not model inputs)",
+     warn: "These are 2025/2026 layers. The model needs predictors circa 1992–2000 and outcomes over 1992–2020, so none of these can enter it. They are here for orientation and for RQ3, which is about the present."}
+  - {id: land,          title: "Coast and land"}
+  - {id: water,         title: "Water"}
+  - {id: transport,     title: "Transport"}
+  - {id: ports,         title: "Ports"}
+  - {id: policy,        title: "Policy (KAPET / KEK)"}
+  - {id: reference,     title: "Reference"}
+
+# ---------------------------------------------------------------------------
+# Vector layers. Any format GDAL reads: .geojson, .gpkg (give `layer:`), .shp.
+#
+#   kind:    polygon | line | point
+#   props:   attributes to show in the click popup
+#   filter:  keep only some features —  {field: X, in: [a, b]}
+#                                       {field: X, startswith: "abc"}
+#   visible: false = off until ticked (use for heavy layers). Not `on:` —
+#            YAML reads a bare `on` as the boolean true, even as a key.
+#   tol:     simplification tolerance in degrees (default 0.005 ≈ 550 m)
+#   ground:  true = opaque, drawn under everything (only the land polygons)
+#   credit:  attribution shown on the map when this layer is included
+#   local_only: true = left out of the committed map/index.html and kept only in
+#            outputs/map/index.html (git-ignored). For data whose licence does not
+#            yet allow redistribution. ALL BIG layers are local_only until BIG
+#            confirms the terms (docs/data-register.md §4.7). Also works on rasters.
+# ---------------------------------------------------------------------------
+vectors:
+  # --- coast and land ---
+  - name: "Land polygons (Area Daratan)"
+    path: data/raw/big_databatimetri_2017/2026-09-12/big_area_daratan_land.geojson
+    credit: "Badan Informasi Geospasial (RBI 1:250,000, 2013)"
+    local_only: true
+    group: land
+    kind: polygon
+    color: "#e8e2d6"
+    props: [TOPONIM, PROVINSI, NEGARA]
+    tol: 0.003
+    ground: true
+    note: >-
+      17,257 polygons. Includes Malaysia, Singapore and Timor-Leste (127, 28 and
+      27 polygons) — BIG's layer carries them, and the NEGARA attribute is what
+      filters them out. This is the input for the land mask.
+
+  - name: "Coastline (Garis Pantai)"
+    path: data/raw/big_atlas_250k_wilayah_sungai/2026-09-12/big_250k_garis_pantai_coastline.geojson
+    credit: "Badan Informasi Geospasial (RBI 1:250,000, 2013)"
+    local_only: true
+    group: land
+    kind: line
+    color: "#8a7f6d"
+    weight: 0.8
+    props: [NAMOBJ]
+    tol: 0.003
+    visible: false
+    note: >-
+      Three features named 'Garis Pantai Malaka' run into Malaysia and Thailand —
+      the reason the extent check flagged 7.125N.
+
+  # --- water ---
+  - name: "River basins (Wilayah Sungai)"
+    path: data/raw/big_atlas_250k_wilayah_sungai/2026-09-12/big_250k_wilayah_sungai_basins.geojson
+    credit: "Badan Informasi Geospasial (RBI 1:250,000, 2013)"
+    local_only: true
+    group: water
+    kind: polygon
+    color: "#b9d6e8"
+    props: [NAMOBJ, NAMA_WS]
+    tol: 0.01
+    visible: false
+    note: "Hydrological catchments, not administrative units."
+
+  - name: "Rivers (Sungai)"
+    path: data/raw/big_atlas_250k_wilayah_sungai/2026-09-12/big_250k_sungai_rivers.geojson
+    credit: "Badan Informasi Geospasial (RBI 1:250,000, 2013)"
+    local_only: true
+    group: water
+    kind: line
+    color: "#2f7fbf"
+    weight: 0.9
+    props: [NAMOBJ]
+
+  - name: "Lakes and reservoirs"
+    path: data/raw/big_atlas_250k_wilayah_sungai/2026-09-12/big_250k_danau_lakes.geojson
+    credit: "Badan Informasi Geospasial (RBI 1:250,000, 2013)"
+    local_only: true
+    group: water
+    kind: polygon
+    color: "#1f6fb0"
+    props: [NAMOBJ]
+    note: >-
+      Includes reservoirs (Waduk), which are built infrastructure with a date —
+      not timeless geography (considerations D14).
+
+  - name: "Groundwater potential"
+    path: data/raw/big_atlas_250k_hidrogeologi/2026-09-12/big_250k_potensi_air_tanah.geojson
+    credit: "Badan Informasi Geospasial (RBI 1:250,000, 2013)"
+    local_only: true
+    group: water
+    kind: polygon
+    color: "#7cc4a8"
+    props: [NAMOBJ, KETERANGAN]
+    tol: 0.01
+    visible: false
+    note: >-
+      Relevant to industrial water supply — a precondition layer the proposal
+      names but does not yet source.
+  # Bathymetry (big_databatimetri_2017/.../big_kedalaman_depth_areas_lln500k.geojson)
+  # is deliberately NOT drawn: heavy, and adds nothing a reviewer needs to see.
+
+  # --- transport: the road layer split by class; the split is itself a finding ---
+  - name: "Roads: Arterial (Jalan Arteri)"
+    path: &roads data/raw/big_atlas_transportasi_darat/2026-09-12/big_transportasi_darat.geojson
+    credit: "Badan Informasi Geospasial (RBI 1:250,000, 2013)"
+    local_only: true
+    group: transport
+    kind: line
+    color: "#c0392b"
+    weight: 2.2
+    props: [NAMA_UNSUR]
+    filter: {field: NAMA_UNSUR, in: ["Jalan Arteri"]}
+    note: "233 features, 8,622 km. The national trunk network."
+
+  - name: "Roads: Toll (Jalan Tol)"
+    path: *roads
+    credit: "Badan Informasi Geospasial (RBI 1:250,000, 2013)"
+    local_only: true
+    group: transport
+    kind: line
+    color: "#7b241c"
+    weight: 2.6
+    props: [NAMA_UNSUR]
+    filter: {field: NAMA_UNSUR, in: ["Jalan Tol Dua Jalur dengan Pemisah Fisik"]}
+    note: "103 features, 614 km. Almost entirely Java."
+
+  - name: "Roads: Collector (Jalan Kolektor)"
+    path: *roads
+    credit: "Badan Informasi Geospasial (RBI 1:250,000, 2013)"
+    local_only: true
+    group: transport
+    kind: line
+    color: "#e67e22"
+    weight: 1.4
+    props: [NAMA_UNSUR]
+    filter: {field: NAMA_UNSUR, in: ["Jalan Kolektor"]}
+    note: "3,604 features, 66,164 km."
+
+  - name: "Roads: Local (Jalan Lokal)"
+    path: *roads
+    credit: "Badan Informasi Geospasial (RBI 1:250,000, 2013)"
+    local_only: true
+    group: transport
+    kind: line
+    color: "#d4a76a"
+    weight: 0.9
+    props: [NAMA_UNSUR]
+    filter: {field: NAMA_UNSUR, in: ["Jalan Lokal"]}
+    visible: false
+    note: "18,567 features, 75,028 km."
+
+  - name: "Roads: OTHER (Jalan Lain)"
+    path: *roads
+    credit: "Badan Informasi Geospasial (RBI 1:250,000, 2013)"
+    local_only: true
+    group: transport
+    kind: line
+    color: "#9a9a9a"
+    weight: 0.6
+    tol: 0.02
+    props: [NAMA_UNSUR]
+    filter: {field: NAMA_UNSUR, in: ["Jalan Lain"]}
+    visible: false
+    note: >-
+      99,518 features and 59.4% of all network length, with NO functional class.
+      Toggle this off to see how little of Indonesia the classified network
+      actually covers. Market access needs a speed per road, and these roads have
+      no class to take one from: guessing too high inflates suitability exactly
+      where the KAPET zones were.
+
+  - name: "Roads: Footpath (Jalan Setapak)"
+    path: *roads
+    credit: "Badan Informasi Geospasial (RBI 1:250,000, 2013)"
+    local_only: true
+    group: transport
+    kind: line
+    color: "#c8bfa0"
+    weight: 0.5
+    tol: 0.02
+    props: [NAMA_UNSUR]
+    filter: {field: NAMA_UNSUR, in: ["Jalan Setapak"]}
+    visible: false
+    note: >-
+      14,395 features, 36,273 km. Not truck-traversable — must be excluded from
+      any routing network.
+
+  - name: "Railways (Jalan Kereta Api)"
+    path: *roads
+    credit: "Badan Informasi Geospasial (RBI 1:250,000, 2013)"
+    local_only: true
+    group: transport
+    kind: line
+    color: "#2c3e50"
+    weight: 1.6
+    dash: "4,3"
+    props: [NAMA_UNSUR]
+    filter: {field: NAMA_UNSUR, in: ["Jalan Kereta Api Jalur Tunggal", "Jalan Kereta Api Jalur Ganda"]}
+    note: >-
+      195 features, 5,717 km — against Indonesia's actual ~6,000 km network,
+      which is how we know the download is complete. In the ROAD layer, so it
+      must be filtered out.
+
+  - name: "Airport runways (Landas Pacu)"
+    path: *roads
+    credit: "Badan Informasi Geospasial (RBI 1:250,000, 2013)"
+    local_only: true
+    group: transport
+    kind: line
+    color: "#8e44ad"
+    weight: 3.0
+    props: [NAMA_UNSUR]
+    filter: {field: NAMA_UNSUR, startswith: "Landas Pacu"}
+    note: >-
+      89 features. Also in the road layer. Unfiltered, a routing graph will send
+      freight down a runway — and runways sit at airports, next to the urban
+      cells whose access is measured.
+
+  # --- ports and policy: entries for data from the indo_data pipeline go here ---
+  # Example (uncomment once the file exists on your machine):
+  # - name: "KAPET whole-unit proxies (modern polygons)"
+  #   path: data/processed/<path-to>/policy_location_proxies.gpkg
+  #   layer: kapet_whole_unit_proxies
+  #   group: policy
+  #   kind: polygon
+  #   color: "#d62728"
+  #   props: [name]
+  #   note: "Contemporary location cues, NOT historical treatment polygons."
+
+  # --- reference ---
+  - name: "RBI 1:250K sheet index"
+    path: data/raw/big_rbi_index/2026-09-12/big_rbi_250k_sheet_index.geojson
+    credit: "Badan Informasi Geospasial (RBI 1:250,000, 2013)"
+    local_only: true
+    group: reference
+    kind: polygon
+    color: "#95a5a6"
+    props: [NOMOR_PETA, NAMA_PETA, REGION, THN_BUAT, DTM]
+    visible: false
+    note: >-
+      309 map sheets, all THN_BUAT 2013. The DTM field is a flag, not a link, and
+      only 62 sheets have one — part of why terrain comes from Copernicus GLO-90.
+
+# ---------------------------------------------------------------------------
+# Raster layers. Rendered to PNG by scripts/build_raster_overlays.py.
+#
+#   mode:    built | pop | volume  (continuous, log colour ramp)
+#            classes               (GHSL degree-of-urbanisation codes 10–30)
+#            classes_l1            (WorldPop's own 1/2/3 codes)
+#            terrain               (a folder of DEM tiles -> shaded relief)
+#   vmax:    the layer's PHYSICAL maximum; anything above is treated as nodata
+#   epochs:  makes the layer a time series with a slider. `path` then contains
+#            {epoch}, and every epoch shares ONE colour scale — a per-epoch
+#            stretch would make 1990 and 2020 look equally built-up and hide
+#            exactly the growth the paper is about.
+# ---------------------------------------------------------------------------
+rasters:
+  - name: "Terrain — Copernicus GLO-90 (relief)"
+    path: data/raw/copernicus_dem_glo90/2026-09-12
+    credit: "Copernicus DEM: &copy; DLR e.V. 2010&ndash;2014 and &copy; Airbus Defence and Space GmbH 2014&ndash;2018 provided under COPERNICUS by the European Union and ESA; all rights reserved"
+    group: land
+    mode: terrain
+    note: >-
+      467 tiles mosaicked, ~90 m, elevation tint x hillshade. A SURFACE model: it
+      includes tree canopy and buildings, so forested terrain reads rougher than
+      cleared terrain at the same true relief. Terrain is the one layer whose
+      epoch does not matter — mountains do not move, which is exactly what makes
+      ruggedness a valid instrument. Ruggedness itself is NOT shown: it is
+      scale-dependent, and a version computed at this display resolution would be
+      a different variable from the one the model will use.
+
+  - name: "GHS-BUILT-S — built-up surface"
+    path: data/interim/ghsl/GHS_BUILT_S_E{epoch}_GLOBE_R2023A_54009_100_V1_0_IDN18.vrt
+    credit: "GHSL R2023A, European Commission JRC"
+    epochs: [1990, 1995, 2000, 2005, 2010, 2015, 2020]
+    group: agglomeration
+    mode: built
+    vmax: 10000
+    note: >-
+      m² of roof per 100 m cell (maximum 10,000). The continuous built-up quantity
+      the proposal names as the robustness alternative to night lights: unlike a
+      class label it can be differenced into a growth trajectory. 1990–2000 =
+      pre-period predictors; 2005–2020 = outcome window. Where exactly the
+      predictor window ends is still open (considerations M5).
+
+  - name: "GHS-BUILT-V — built-up volume"
+    path: data/interim/ghsl/GHS_BUILT_V_E{epoch}_GLOBE_R2023A_54009_100_V1_0_IDN18.vrt
+    credit: "GHSL R2023A, European Commission JRC"
+    epochs: [1990, 1995, 2000, 2005, 2010, 2015, 2020]
+    group: agglomeration
+    mode: volume
+    note: >-
+      m³ of building per 100 m cell. Volume ÷ surface = mean building height: a
+      candidate discriminator between low industrial sheds and tall commercial
+      cores, which matters because night lights measure electrified activity,
+      not industry (considerations M2). Untested.
+
+  - name: "GHS-POP — residential population"
+    path: data/interim/ghsl/GHS_POP_E{epoch}_GLOBE_R2023A_54009_100_V1_0_IDN18.vrt
+    credit: "GHSL R2023A, European Commission JRC"
+    epochs: [1990, 1995, 2000, 2005, 2010, 2015, 2020]
+    group: agglomeration
+    mode: pop
+    note: >-
+      People per 100 m cell. A MODEL, not a measurement: census totals spread onto
+      GHSL's own built-up surface — so using it to predict a BUILT-S outcome
+      partly regresses a variable on a transformation of itself. IPUMS census data
+      is the more honest pre-period labour layer.
+
+  - name: "GHS-SMOD — degree of urbanisation"
+    path: data/interim/ghsl/GHS_SMOD_E{epoch}_GLOBE_R2023A_54009_1000_V2_0_IDN18.vrt
+    credit: "GHSL R2023A, European Commission JRC"
+    epochs: [1990, 1995, 2000, 2005, 2010, 2015, 2020]
+    group: agglomeration
+    mode: classes
+    note: >-
+      A CLASSIFICATION, one label per 1 km cell — not a quantity. Good for
+      descriptives (how urban was a KAPET zone when designated?) and as a mask;
+      you cannot difference class labels into a growth trajectory
+      (considerations D2).
+
+  - name: "GHS-WUP BUILT-S 2025"
+    path: data/raw/ghsl_wup_r2025a/2026-09-12/GHS_WUP_BUILT_S_E2025_GLOBE_R2025A_4326_30ss_V1_0/GHS_WUP_BUILT_S_E2025_GLOBE_R2025A_4326_30ss_V1_0.tif
+    credit: "GHSL R2025A, European Commission JRC"
+    group: contemporary
+    mode: built
+    note: >-
+      Projected built-up surface, 30 arc-sec, EPSG:4326, release R2025A. A
+      DIFFERENT release from the R2023A series above — not interchangeable with
+      it within one variable.
+
+  - name: "GHS-WUP POP 2025"
+    path: data/raw/ghsl_wup_r2025a/2026-09-12/GHS_WUP_POP_E2025_GLOBE_R2025A_4326_30ss_V1_0/GHS_WUP_POP_E2025_GLOBE_R2025A_4326_30ss_V1_0.tif
+    credit: "GHSL R2025A, European Commission JRC"
+    group: contemporary
+    mode: pop
+    note: "Projected population, 30 arc-sec, EPSG:4326, R2025A."
+
+  - name: "GHS-WUP DEGURBA 2025"
+    path: data/raw/ghsl_wup_r2025a/2026-09-12/GHS_WUP_DEGURBA_E2025_GLOBE_R2025A_54009_1000_V1_0/GHS_WUP_DEGURBA_E2025_GLOBE_R2025A_54009_1000_V1_0.tif
+    credit: "GHSL R2025A, European Commission JRC"
+    group: contemporary
+    mode: classes
+    note: >-
+      Degree-of-urbanisation classes, R2025A. Ships with settlement POLYGONS
+      (UC/DUC/SDUC/RC) alongside — a polygon says which cells form one
+      settlement, which is what naming an RQ3 corridor actually requires.
+
+  - name: "WorldPop 2025 — population"
+    path: data/raw/worldpop_idn/2026-09-12/idn_pop_2025_CN_100m_R2025A_v1.tif
+    credit: "WorldPop (CC BY 4.0)"
+    group: contemporary
+    mode: pop
+    note: >-
+      Constrained population, 100 m, 2025. 'Constrained' means counts are placed
+      only where a built-up layer says people live — so it and GHS-POP are two
+      downscalings of the same census, not two measurements.
+
+  - name: "WorldPop DUG 2026 — L1"
+    path: data/raw/worldpop_idn/2026-09-12/IDN_DUG_2026_GRID_L1_R2025A_v1.tif
+    credit: "WorldPop (CC BY 4.0)"
+    group: contemporary
+    mode: classes_l1
+    note: >-
+      WorldPop's degree-of-urbanisation grid, level 1. Codes 1/2/3, NOT the
+      GHSL codes the other degree-of-urbanisation layers use (considerations D13).
+
+  - name: "WorldPop DUG 2026 — L2"
+    path: data/raw/worldpop_idn/2026-09-12/IDN_DUG_2026_GRID_L2_R2025A_v1.tif
+    credit: "WorldPop (CC BY 4.0)"
+    group: contemporary
+    mode: classes
+    note: "WorldPop's degree-of-urbanisation grid, level 2. GHSL codes."
